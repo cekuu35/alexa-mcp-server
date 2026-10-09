@@ -1,0 +1,9 @@
+
+  Supabase RLS Security Audit MCP Server
+  Zero-dependency | MCP spec 2025-11-25 | Streamable HTTP
+  ─────────────────────────────────────────────
+  Listening:  http://localhost:3001
+  MCP:        http://localhost:3001/mcp (POST)
+  Health:     http://localhost:3001/health (GET)
+  Tools:      scan_repo, get_summary, get_fix
+

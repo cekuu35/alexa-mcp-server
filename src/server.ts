@@ -82,6 +82,88 @@ function handleToolsList(): any {
                 "authenticated_write_all",
                 "committed_service_role",
                 "login_helper_anon",
+                "oct30_grant",
+                "oct30_runtime_table",
+              ],
+              description: "The vulnerability pattern to get a fix for",
+            },
+          },
+          required: ["pattern"],
+        },
+      },
+      {
+        name: "generate_rls",
+        description:
+          "Generate RLS policies for a Supabase table based on the table name and access pattern. Returns CREATE TABLE + GRANT + RLS policy SQL ready to copy into a migration.",
+        inputSchema: {
+          type: "object",
+          properties: {
+            table: {
+              type: "string",
+              description: "Table name (e.g., 'posts', 'user_profiles')",
+            },
+            pattern: {
+              type: "string",
+              enum: ["owner_only", "authenticated_read_all", "public_read", "tenant_isolated"],
+              description: "Access pattern for the table",
+            },
+            has_user_id: {
+              type: "boolean",
+              description: "Whether the table has a user_id column (defaults to true)",
+            },
+          },
+          required: ["table", "pattern"],
+        },
+      },
+      {
+        name: "oct30_readiness_check",
+        description:
+          "Check a repo for October 30, 2026 readiness (Supabase breaking change: auto-grants removed). Returns which CREATE TABLE statements lack GRANT and what to add.",
+        inputSchema: {
+          type: "object",
+          properties: {
+            repo: {
+              type: "string",
+              description: "GitHub repository in 'owner/repo' format",
+            },
+          },
+          required: ["repo"],
+        },
+      },
+          },
+          required: ["repo"],
+        },
+      },
+      {
+        name: "get_summary",
+        description:
+          "Quick summary: scan a repo and return just the finding counts by severity (no details).",
+        inputSchema: {
+          type: "object",
+          properties: {
+            repo: {
+              type: "string",
+              description: "GitHub repository in 'owner/repo' format",
+            },
+          },
+          required: ["repo"],
+        },
+      },
+      {
+        name: "get_fix",
+        description:
+          "Get the recommended fix SQL for a specific RLS vulnerability pattern.",
+        inputSchema: {
+          type: "object",
+          properties: {
+            pattern: {
+              type: "string",
+              enum: [
+                "anon_read_all",
+                "no_to_clause",
+                "authenticated_write_all",
+                "committed_service_role",
+                "login_helper_anon",
               ],
               description: "The vulnerability pattern to get a fix for",
             },

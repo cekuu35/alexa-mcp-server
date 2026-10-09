@@ -1,0 +1,8 @@
+file 'C:\Users\cnkku\Desktop\opencode\alexa-mcp-server\demo\seg1.mp4'
+file 'C:\Users\cnkku\Desktop\opencode\alexa-mcp-server\demo\seg2.mp4'
+file 'C:\Users\cnkku\Desktop\opencode\alexa-mcp-server\demo\seg3.mp4'
+file 'C:\Users\cnkku\Desktop\opencode\alexa-mcp-server\demo\seg4.mp4'
+file 'C:\Users\cnkku\Desktop\opencode\alexa-mcp-server\demo\seg5.mp4'
+file 'C:\Users\cnkku\Desktop\opencode\alexa-mcp-server\demo\seg6.mp4'
+file 'C:\Users\cnkku\Desktop\opencode\alexa-mcp-server\demo\seg7.mp4'
+file 'C:\Users\cnkku\Desktop\opencode\alexa-mcp-server\demo\seg8.mp4'
