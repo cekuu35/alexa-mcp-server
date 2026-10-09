@@ -1,0 +1,23 @@
+{
+  "name": "supabase-rls-security-audit-mcp",
+  "version": "1.0.0",
+  "description": "MCP server that scans GitHub repos for Supabase/Postgres RLS security issues. Built for the Amazon Developer Hackathon (Alexa+ Track).",
+  "main": "dist/server.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "tsx src/server.ts"
+  },
+  "keywords": ["mcp", "supabase", "security", "rls", "alexa", "audit"],
+  "author": "Cenk Kurtoglu",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "tsx": "^4.19.0",
+    "@types/node": "^22.0.0"
+  }
+}
